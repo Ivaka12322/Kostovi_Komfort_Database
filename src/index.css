@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-charcoal-800 bg-cream-50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold-500 text-charcoal-900 font-sans font-semibold px-7 py-3 text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold-600 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-outline-gold {
+    @apply border border-gold-500 text-gold-500 font-sans font-medium px-7 py-3 text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold-500 hover:text-charcoal-900;
+  }
+
+  .btn-outline-white {
+    @apply border border-white/60 text-white font-sans font-medium px-7 py-3 text-sm tracking-widest uppercase transition-all duration-300 hover:border-gold-500 hover:text-gold-500;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl md:text-5xl text-charcoal-900 leading-tight;
+  }
+
+  .gold-divider {
+    @apply w-12 h-px bg-gold-500 my-4;
+  }
+
+  .animate-delayed-1 { animation-delay: 0.1s; opacity: 0; }
+  .animate-delayed-2 { animation-delay: 0.2s; opacity: 0; }
+  .animate-delayed-3 { animation-delay: 0.3s; opacity: 0; }
+  .animate-delayed-4 { animation-delay: 0.4s; opacity: 0; }
+  .animate-delayed-5 { animation-delay: 0.5s; opacity: 0; }
+  .animate-delayed-6 { animation-delay: 0.6s; opacity: 0; }
+}
+
+/* Accordion smooth transition */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+}
+
+/* Learn More expansion */
+.learn-more-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.learn-more-content.open {
+  grid-template-rows: 1fr;
+}
+
+.learn-more-inner {
+  overflow: hidden;
+}
+
+/* Subtle grain texture on dark sections */
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Nav link underline animation */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Form inputs */
+.form-input {
+  @apply w-full bg-white border border-cream-200 px-4 py-3 text-sm font-sans text-charcoal-800 outline-none transition-all duration-200 focus:border-gold-500;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.form-input:focus {
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.04), 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+/* Hero entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scroll animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1.visible { animation-delay: 0.1s; }
+.reveal-delay-2.visible { animation-delay: 0.2s; }
+.reveal-delay-3.visible { animation-delay: 0.3s; }
+.reveal-delay-4.visible { animation-delay: 0.4s; }
+.reveal-delay-5.visible { animation-delay: 0.5s; }
+.reveal-delay-6.visible { animation-delay: 0.6s; }
