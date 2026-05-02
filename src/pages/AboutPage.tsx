@@ -93,7 +93,7 @@ export default function AboutPage() {
             <div className="relative reveal">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src="public/Hero_bg_image.jpg"
+                  src="/Hero_bg_image.jpg"
                   alt="Шоурум Костови Комфорт"
                   className="w-full h-full object-cover"
                 />
