@@ -66,7 +66,7 @@ export default function AboutPage() {
                 <p className="font-sans text-charcoal-800/65 text-sm leading-relaxed text-center">
 Вярваме, че домът е усещане за комфорт и защита, затова подбираме всеки детайл според най-високите стандарти за качество и функционалност.
                 </p>
-                <p className="font-sans text-charcoal-800/65 text-sm leading-relaxed">
+                <p className="font-sans text-charcoal-800/65 text-sm leading-relaxed text-center">
 Гордеем се с партньорството си със <strong className="text-charcoal-900">Solid55</strong> и <strong className="text-charcoal-900">Hörmann</strong> като техни ексклузивни дистрибутори в България.
                 </p>
               </div>
