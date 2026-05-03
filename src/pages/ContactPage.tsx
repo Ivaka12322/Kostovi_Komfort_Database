@@ -8,7 +8,7 @@ const mapUrls: Record<Location, string> = {
   montana:
     'https://maps.google.com/maps?q=%D1%83%D0%BB.+%D0%9A%D0%BB%D0%B8%D0%BC%D0%B5%D0%BD%D1%82+%D0%9E%D1%85%D1%80%D0%B8%D0%B4%D1%81%D0%BA%D0%B8+10,+%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%BD%D0%B0,+%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&t=m&z=16&output=embed&iwloc=near',
   kozloduy:
-'https://www.google.com/maps/place/3320+Kozloduy/@43.775847,23.696029,14z/data=!3m1!4b1!4m6!3m5!1s0x40aca7cb86536ced:0x400a01269bf5d50!8m2!3d43.7755615!4d23.7246154!16zL20vMGJ2cmRj?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D',
+    'https://maps.google.com/maps?q=Kozloduy,Bulgaria&t=m&z=13&output=embed&iwloc=near',
 };
 
 export default function ContactPage() {
