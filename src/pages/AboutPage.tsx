@@ -61,7 +61,11 @@ export default function AboutPage() {
               {/* Mobile: condensed single paragraph */}
               <div className="reveal lg:hidden">
                 <p className="font-sans text-charcoal-800/65 text-sm leading-relaxed text-center">
-                  Основана през 2004 г., „Костови Комфорт" е символ на сигурност и дълготрайност. Ексклузивни дистрибутори на <strong className="text-charcoal-900">Solid55</strong> и <strong className="text-charcoal-900">Hörmann</strong> в България.
+                  Създадена през 2004 г., „Костови Комфорт“ предлага висококачествени интериорни и екстериорни решения, утвърждавайки се като символ на сигурност, естетика и дълготрайност.
+
+Вярваме, че домът е усещане за комфорт и защита, затова подбираме всеки детайл според най-високите стандарти за качество и функционалност.
+
+Гордеем се с партньорството си със <strong className="text-charcoal-900">Solid55</strong> и <strong className="text-charcoal-900">Hörmann</strong> като техни ексклузивни дистрибутори в България.
                 </p>
               </div>
 
