@@ -344,7 +344,7 @@ export default function ContactPage() {
               <p className="font-sans text-charcoal-800/60 text-sm">
                 {activeLocation === 'montana'
                   ? 'гр. Монтана, ул. „Климент Охридски" №10'
-                  : 'гр. Козлодуй, ж.к. 2А, Блок 79 (партер) — срещу Т Маркет'}
+                  : 'гр. Козлодуй'}
               </p>
             </div>
           </div>
