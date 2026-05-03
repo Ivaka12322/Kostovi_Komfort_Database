@@ -204,11 +204,11 @@ export default function ProductsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/80 via-charcoal-900/70 to-charcoal-900/90" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full text-center lg:text-left">
           <p className="font-sans text-gold-400 text-xs tracking-[0.25em] uppercase mb-3">Нашият Асортимент</p>
           <h1 className="font-display text-5xl lg:text-6xl text-white font-normal mb-4">Нашите Продукти</h1>
-          <div className="w-12 h-px bg-gold-500 mb-5" />
-          <p className="font-sans text-white/60 text-sm leading-relaxed max-w-lg">
+          <div className="w-12 h-px bg-gold-500 mb-5 mx-auto lg:mx-0" />
+          <p className="font-sans text-white/60 text-sm leading-relaxed max-w-lg mx-auto lg:mx-0">
             Разгледайте нашия богат асортимент от висококачествени врати. Предлагаме решения, съчетаващи сигурност, елегантен дизайн и дълготрайност за всеки дом и офис.
           </p>
         </div>
@@ -226,12 +226,12 @@ export default function ProductsPage() {
       {/* Consultation CTA */}
       <section className="bg-cream-100 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="border border-gold-500/30 p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="border border-gold-500/30 p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
             <div>
               <h3 className="font-display text-3xl text-charcoal-900 font-normal mb-2">
                 Нуждаете се от консултация?
               </h3>
-              <p className="font-sans text-charcoal-800/55 text-sm leading-relaxed max-w-lg">
+              <p className="font-sans text-charcoal-800/55 text-sm leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Нашите експерти са на разположение, за да ви помогнат в избора на най-подходящите врати за вашия проект. Свържете се с нас за индивидуална оферта и професионален съвет.
               </p>
             </div>

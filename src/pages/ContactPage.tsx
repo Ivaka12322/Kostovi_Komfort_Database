@@ -4,12 +4,11 @@ import { supabase } from '../lib/supabase';
 
 type Location = 'montana' | 'kozloduy';
 
-// Google Maps embeds — city-level views, no API key required for basic embeds.
 const mapUrls: Record<Location, string> = {
   montana:
-    'https://maps.google.com/maps?q=Montana,Bulgaria&t=m&z=13&output=embed&iwloc=near',
+    'https://maps.google.com/maps?q=%D1%83%D0%BB.+%D0%9A%D0%BB%D0%B8%D0%BC%D0%B5%D0%BD%D1%82+%D0%9E%D1%85%D1%80%D0%B8%D0%B4%D1%81%D0%BA%D0%B8+10,+%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%BD%D0%B0,+%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&t=m&z=16&output=embed&iwloc=near',
   kozloduy:
-    'https://maps.google.com/maps?q=Kozloduy,Bulgaria&t=m&z=14&output=embed&iwloc=near',
+    'https://maps.google.com/maps?q=%D0%B6.%D0%BA.+2%D0%90,+%D0%91%D0%BB%D0%BE%D0%BA+79,+%D0%9A%D0%BE%D0%B7%D0%BB%D0%BE%D0%B4%D1%83%D0%B9,+%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&t=m&z=16&output=embed&iwloc=near',
 };
 
 export default function ContactPage() {
@@ -67,13 +66,13 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/80 via-charcoal-900/70 to-charcoal-900/90" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full text-center lg:text-left">
           <p className="font-sans text-gold-400 text-xs tracking-[0.25em] uppercase mb-3">Контакти</p>
           <h1 className="font-display text-5xl lg:text-6xl text-white font-normal mb-4">
             Свържете се с нас
           </h1>
-          <div className="w-12 h-px bg-gold-500 mb-5" />
-          <p className="font-sans text-white/60 text-sm leading-relaxed max-w-lg">
+          <div className="w-12 h-px bg-gold-500 mb-5 mx-auto lg:mx-0" />
+          <p className="font-sans text-white/60 text-sm leading-relaxed max-w-lg mx-auto lg:mx-0">
             Ние сме тук, за да отговорим на вашите въпроси и да ви помогнем да изберете най-доброто решение за вашия дом.
           </p>
         </div>

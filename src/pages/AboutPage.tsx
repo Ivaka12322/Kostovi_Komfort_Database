@@ -48,17 +48,25 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="bg-cream-50 py-20">
+      <section className="bg-cream-50 py-10 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-start">
             <div>
-              <p className="font-sans text-gold-600 text-xs tracking-[0.25em] uppercase mb-3 reveal">История</p>
-              <h2 className="font-display text-4xl lg:text-5xl text-charcoal-900 font-normal mb-4 reveal">
+              <p className="font-sans text-gold-600 text-xs tracking-[0.25em] uppercase mb-3 text-center lg:text-left reveal">История</p>
+              <h2 className="font-display text-4xl lg:text-5xl text-charcoal-900 font-normal mb-4 text-center lg:text-left reveal">
                 Нашата История
               </h2>
-              <div className="w-12 h-px bg-gold-500 mb-7 reveal" />
+              <div className="w-12 h-px bg-gold-500 mb-5 lg:mb-7 reveal mx-auto lg:mx-0" />
 
-              <div className="space-y-5 reveal">
+              {/* Mobile: condensed single paragraph */}
+              <div className="reveal lg:hidden">
+                <p className="font-sans text-charcoal-800/65 text-sm leading-relaxed text-center">
+                  Основана през 2004 г., „Костови Комфорт" е символ на сигурност и дълготрайност. Ексклузивни дистрибутори на <strong className="text-charcoal-900">Solid55</strong> и <strong className="text-charcoal-900">Hörmann</strong> в България.
+                </p>
+              </div>
+
+              {/* Desktop: full text */}
+              <div className="space-y-5 reveal hidden lg:block">
                 <p className="font-sans text-charcoal-800/65 text-sm leading-relaxed">
                   Създадена през 2004 година, „Костови Комфорт" стартира с ясната визия да предложи на българския пазар безкомпромисно качество в интериорните и екстериорните решения. Повече от две десетилетия ние сме символ на сигурност, естетика и дълготрайност.
                 </p>
@@ -71,19 +79,19 @@ export default function AboutPage() {
               </div>
 
               {/* Stats */}
-              <div className="flex gap-10 mt-10 reveal">
-                <div>
-                  <p className="font-display text-5xl text-gold-500 font-semibold">20+</p>
+              <div className="flex gap-6 lg:gap-10 mt-6 lg:mt-10 reveal justify-center lg:justify-start">
+                <div className="text-center lg:text-left">
+                  <p className="font-display text-4xl lg:text-5xl text-gold-500 font-semibold">20+</p>
                   <p className="font-sans text-charcoal-800/50 text-xs tracking-widest uppercase mt-1">Години Опит</p>
                 </div>
                 <div className="w-px bg-cream-200" />
-                <div>
-                  <p className="font-display text-5xl text-gold-500 font-semibold">10k+</p>
+                <div className="text-center lg:text-left">
+                  <p className="font-display text-4xl lg:text-5xl text-gold-500 font-semibold">10k+</p>
                   <p className="font-sans text-charcoal-800/50 text-xs tracking-widest uppercase mt-1">Доволни Клиенти</p>
                 </div>
                 <div className="w-px bg-cream-200" />
-                <div>
-                  <p className="font-display text-5xl text-gold-500 font-semibold">2</p>
+                <div className="text-center lg:text-left">
+                  <p className="font-display text-4xl lg:text-5xl text-gold-500 font-semibold">2</p>
                   <p className="font-sans text-charcoal-800/50 text-xs tracking-widest uppercase mt-1">Шоурума</p>
                 </div>
               </div>
@@ -91,19 +99,18 @@ export default function AboutPage() {
 
             {/* Image */}
             <div className="relative reveal">
-              <div className="aspect-[4/5] overflow-hidden">
+              <div className="aspect-[16/9] lg:aspect-[4/5] overflow-hidden">
                 <img
                   src="/Hero_bg_image.jpg"
                   alt="Шоурум Костови Комфорт"
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Decorative frame */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-t border-l border-gold-500/40" />
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-gold-500/40" />
-              <div className="absolute bottom-6 left-0 right-0 mx-6">
+              <div className="absolute -top-4 -left-4 w-24 h-24 border-t border-l border-gold-500/40 hidden lg:block" />
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-gold-500/40 hidden lg:block" />
+              <div className="absolute bottom-4 lg:bottom-6 left-0 right-0 mx-4 lg:mx-6">
                 <div className="bg-charcoal-900/90 backdrop-blur-sm px-5 py-3">
-                  <p className="font-display text-white text-sm italic">Нашият шоурум в Монтана</p>
+                  <p className="font-display text-white text-sm italic text-center lg:text-left">Нашият шоурум в Монтана</p>
                 </div>
               </div>
             </div>
@@ -139,7 +146,7 @@ export default function AboutPage() {
       <section className="relative bg-charcoal-900 py-16 lg:py-20 grain-overlay overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 text-center lg:text-left">
               <p className="font-sans text-gold-500/70 text-xs tracking-[0.25em] uppercase mb-2">Партньорство</p>
               <h2 className="font-display text-4xl text-white font-medium mb-3 leading-tight">
                 Официални Дистрибутори

@@ -7,22 +7,22 @@ const features = [
   {
     icon: Gem,
     title: 'Премиум Материали',
-    desc: 'Изградени само от висококачествени суровини с естетика и издръжливост.',
+    desc: 'Висококачествени суровини с естетика и издръжливост.',
   },
   {
     icon: Wrench,
     title: 'Прецизна Изработка',
-    desc: 'Внимание към всеки детайл за перфектно прилягане и функциониране.',
+    desc: 'Внимание към детайла за перфектно прилягане.',
   },
   {
     icon: Shield,
     title: 'Доказана Сигурност',
-    desc: 'Сертифицирани системи за закрила на вашия дом и спокойствие.',
+    desc: 'Сертифицирани системи за защита на вашия дом.',
   },
   {
     icon: Clock,
     title: 'Дълготрайност',
-    desc: 'Инвестиция, която запазва своята стойност и качество с времето.',
+    desc: 'Инвестиция, запазваща стойността си с времето.',
   },
 ];
 
@@ -176,32 +176,31 @@ export default function HomePage() {
       </section>
 
       {/* Quality & Details */}
-      <section className="bg-cream-50 py-24 lg:py-32">
+      <section className="bg-cream-50 py-10 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-center">
             <div>
-              <p className="font-sans text-gold-600 text-xs tracking-[0.25em] uppercase mb-3 reveal">Защо Нас</p>
-              <h2 className="section-heading mb-4 reveal">Качество и Детайли</h2>
-              <div className="gold-divider reveal" />
-              <p className="font-sans text-charcoal-800/60 text-sm leading-relaxed mt-5 mb-10 reveal">
-                Всяка врата, която предлагаме, е създадена с внимание към детайла и съвременния дизайн, съчетавайки безупречно качество с издръжливи материали.
+              <p className="font-sans text-gold-600 text-xs tracking-[0.25em] uppercase mb-2 lg:mb-3 text-center lg:text-left reveal">Защо Нас</p>
+              <h2 className="section-heading mb-3 lg:mb-4 text-center lg:text-left reveal">Качество и Детайли</h2>
+              <div className="gold-divider reveal mx-auto lg:mx-0" />
+              <p className="font-sans text-charcoal-800/60 text-sm leading-relaxed mt-3 mb-5 lg:mt-5 lg:mb-10 text-center lg:text-left reveal">
+                Всяка врата е създадена с внимание към детайла, съчетавайки безупречно качество с издръжливи материали.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-2 gap-3 lg:gap-5">
                 {features.map((f, i) => (
                   <div
                     key={f.title}
-                    className={`reveal reveal-delay-${i + 1} group relative bg-white border border-cream-200 p-7 overflow-hidden hover:border-gold-500/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5`}
+                    className={`reveal reveal-delay-${i + 1} group relative bg-white border border-cream-200 p-4 lg:p-7 overflow-hidden hover:border-gold-500/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5`}
                   >
-                    {/* Subtle gold accent line */}
                     <div className="absolute top-0 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-500" />
 
-                    <div className="flex items-start gap-4">
-                      <div className="shrink-0 w-11 h-11 bg-gold-500/10 border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/15 transition-colors duration-300">
-                        <f.icon size={19} className="text-gold-600" />
+                    <div className="flex flex-col gap-2 lg:flex-row lg:items-start lg:gap-4">
+                      <div className="shrink-0 w-9 h-9 lg:w-11 lg:h-11 bg-gold-500/10 border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/15 transition-colors duration-300">
+                        <f.icon size={16} className="text-gold-600 lg:text-[19px]" />
                       </div>
                       <div>
-                        <h4 className="font-display text-base font-semibold text-charcoal-900 mb-1.5 leading-snug">{f.title}</h4>
+                        <h4 className="font-display text-sm lg:text-base font-semibold text-charcoal-900 mb-1 leading-snug">{f.title}</h4>
                         <p className="font-sans text-charcoal-800/55 text-xs leading-relaxed">{f.desc}</p>
                       </div>
                     </div>
@@ -210,7 +209,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative reveal">
+            <div className="relative reveal hidden lg:block">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src="/door_quality_section.jpg"
@@ -218,8 +217,18 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Decorative gold border */}
               <div className="absolute -bottom-4 -right-4 w-3/4 h-3/4 border border-gold-500/30 -z-10" />
+            </div>
+
+            {/* Mobile-only image — shown compactly below features */}
+            <div className="relative reveal lg:hidden">
+              <div className="aspect-[16/9] overflow-hidden">
+                <img
+                  src="/door_quality_section.jpg"
+                  alt="Качество на вратите"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
